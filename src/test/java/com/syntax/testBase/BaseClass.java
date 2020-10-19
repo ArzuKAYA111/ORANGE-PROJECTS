@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -20,13 +21,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 
 	public static WebDriver driver;
-	
 	public static ExtentHtmlReporter htmlReport;
 	public static ExtentReports report;
 	public static ExtentTest test;
 	
-	
-@BeforeMethod(alwaysRun=true)
+@BeforeTest(alwaysRun=true)
 /**
  * The ExtentHtmlReporter creates a rich standalone HTML file. It allows several
  * configuration options via the <code>config()</code> method.
@@ -38,12 +37,14 @@ public class BaseClass {
 public void  GenerateReport() {
 	
 	//extendReporter class' Object
-	htmlReport=new 	ExtentHtmlReporter(Constants.REPORT_FILEPATH);
 	
+	ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
+	htmlReport=new 	ExtentHtmlReporter(Constants.REPORT_FILEPATH);
+
+
 	htmlReport.config().setDocumentTitle(ConfigsReader.getProperty("reportTitle"));
 	htmlReport.config().setReportName(ConfigsReader.getProperty("reportName"));
-	htmlReport.config().setTheme(Theme.DARK);
-	
+	htmlReport.config().setTheme(Theme.DARK);// it makkes Dark backround 
 	
 	
 	report=new ExtentReports();
@@ -54,15 +55,15 @@ public void  GenerateReport() {
  * this method write the report after test copleted
  */
 @AfterTest(alwaysRun=true)
-public void writeReport() {
+public void writeReporter() {
 	report.flush();
-	
 }
 
 /**
  * this method initialize the browsers and navigate to url
  * @return
  */
+@BeforeMethod(alwaysRun=true)
 	public static WebDriver setUp() {
 
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
@@ -84,7 +85,7 @@ public void writeReport() {
 				                                     // This is ChromeBrowser Headless mode 
 					                                 // we can write like cOptions codes for other repositories instead of ChromeOptions cOptions=new ChromeOptions(); we will use 
 		}                                           //FirefoxOptions fOptions=new FirefoxOptions(); sonradan tamamla
-			
+
 			driver = new ChromeDriver();
 			break;
 		case "firefox":
@@ -98,10 +99,11 @@ driver.manage().window().maximize(); // we manage the driver to make page full s
 driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT_TIME,TimeUnit.SECONDS);//this code provides wait to findElemet method to load element 
 driver.get(ConfigsReader.getProperty("url"));	//this code navigate to specified url (specified url is in the configuration filr)
 		
+// initialize all page objects as part of setup
+PageInitializer.initialize();
 		return driver;
 
 	}
-
 
 /**
  * this method close all windows/browser

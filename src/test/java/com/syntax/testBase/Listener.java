@@ -9,7 +9,9 @@ import com.syntax.utilities.CommonMethods;
 
 public class Listener implements ITestListener {
 	
-	
+	/**
+	 * This method start to create report and log out the Test Started
+	 */
 @Override	
 public void onTestStart(ITestResult result)	{// this listener will execute when @Testmethod start
 		
@@ -17,7 +19,9 @@ public void onTestStart(ITestResult result)	{// this listener will execute when 
 		BaseClass.test=BaseClass.report.createTest(result.getName());
 		
 	}
-
+/**
+ * This method takes ScreenShot which passed test  and log out the Test Passed
+ */
 @Override
 public void onTestSuccess(ITestResult result) {
 	
@@ -31,7 +35,9 @@ public void onTestSuccess(ITestResult result) {
 		e.printStackTrace();
 	}
 }
-
+/**
+ *  This method takes ScreenShot which failed test  and log out the Test Failed
+ */
 @Override
 public void onTestFailure(ITestResult result) {
 	System.out.println("Test Failed " + result.getName());	

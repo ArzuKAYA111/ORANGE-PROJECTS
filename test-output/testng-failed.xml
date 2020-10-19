@@ -3,12 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.syntax.testClasses.Tesst">
+      <class name="com.syntax.TestCases.LoginHRMS">
         <methods>
           <include name="setUp"/>
-          <include name="loginHRMS"/>
+          <include name="LoginMissingPassword"/>
+          <include name="loginInvalidCredentials"/>
+          <include name="loginValidCredentials"/>
+          <include name="writeReporter"/>
+          <include name="tearDown"/>
+          <include name="LoginMissingUsername"/>
+          <include name="GenerateReport"/>
         </methods>
-      </class> <!-- com.syntax.testClasses.Tesst -->
+      </class> <!-- com.syntax.TestCases.LoginHRMS -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

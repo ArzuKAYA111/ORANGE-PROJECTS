@@ -1,21 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-07T14:59:06 CDT" name="Default suite" finished-at="2020-09-07T14:59:15 CDT" duration-ms="9843">
+  <suite started-at="2020-10-17T23:01:15 CDT" name="LoginHRMS" finished-at="2020-10-17T23:02:13 CDT" duration-ms="57692">
     <groups>
     </groups>
-    <test started-at="2020-09-07T14:59:06 CDT" name="Default test" finished-at="2020-09-07T14:59:15 CDT" duration-ms="9843">
-      <class name="com.syntax.testClasses.Tesst">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.syntax.testClasses.Tesst@2ddc8ecb]" started-at="2020-09-07T14:59:06 CDT" name="setUp" finished-at="2020-09-07T14:59:15 CDT" duration-ms="9731" status="PASS">
+    <test started-at="2020-10-17T23:01:15 CDT" name="LoginTest" finished-at="2020-10-17T23:02:13 CDT" duration-ms="57692">
+      <class name="com.syntax.TestCases.LoginHRMS">
+        <test-method is-config="true" signature="GenerateReport()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:16 CDT" name="GenerateReport" finished-at="2020-10-17T23:01:16 CDT" duration-ms="330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GenerateReport -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:16 CDT" name="setUp" finished-at="2020-10-17T23:01:30 CDT" duration-ms="14065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginHRMS()[pri:0, instance:com.syntax.testClasses.Tesst@2ddc8ecb]" started-at="2020-09-07T14:59:15 CDT" name="loginHRMS" finished-at="2020-09-07T14:59:15 CDT" duration-ms="11" status="PASS">
+        <test-method signature="LoginMissingPassword()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:30 CDT" name="LoginMissingPassword" finished-at="2020-10-17T23:01:31 CDT" duration-ms="670" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginHRMS -->
-      </class> <!-- com.syntax.testClasses.Tesst -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- LoginMissingPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:31 CDT" name="tearDown" finished-at="2020-10-17T23:01:32 CDT" duration-ms="1351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:32 CDT" name="setUp" finished-at="2020-10-17T23:01:43 CDT" duration-ms="10245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LoginMissingUsername()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:43 CDT" name="LoginMissingUsername" finished-at="2020-10-17T23:01:43 CDT" duration-ms="537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginMissingUsername -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:44 CDT" name="tearDown" finished-at="2020-10-17T23:01:45 CDT" duration-ms="934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:45 CDT" name="setUp" finished-at="2020-10-17T23:01:55 CDT" duration-ms="10303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginInvalidCredentials()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:55 CDT" name="loginInvalidCredentials" finished-at="2020-10-17T23:01:56 CDT" duration-ms="1033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:56 CDT" name="tearDown" finished-at="2020-10-17T23:01:57 CDT" duration-ms="873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:01:57 CDT" name="setUp" finished-at="2020-10-17T23:02:07 CDT" duration-ms="10223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginValidCredentials()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:02:07 CDT" name="loginValidCredentials" finished-at="2020-10-17T23:02:10 CDT" duration-ms="2316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:02:11 CDT" name="tearDown" finished-at="2020-10-17T23:02:12 CDT" duration-ms="1444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="writeReporter()[pri:0, instance:com.syntax.TestCases.LoginHRMS@794cb805]" started-at="2020-10-17T23:02:12 CDT" name="writeReporter" finished-at="2020-10-17T23:02:13 CDT" duration-ms="804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeReporter -->
+      </class> <!-- com.syntax.TestCases.LoginHRMS -->
+    </test> <!-- LoginTest -->
+  </suite> <!-- LoginHRMS -->
 </testng-results>

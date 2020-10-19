@@ -1,0 +1,12 @@
+com\syntax\testBase\PageInitializer.class
+com\syntax\pages\LoginPageElements.class
+com\syntax\utilities\APIendsPoints.class
+com\syntax\utilities\DButils.class
+com\syntax\testBase\Listener.class
+com\syntax\utilities\APIpayloads.class
+com\syntax\pages\DashBoardPageElements.class
+com\syntax\utilities\CommonMethods.class
+com\syntax\utilities\Constants.class
+com\syntax\utilities\ConfigsReader.class
+com\syntax\testBase\BaseClass.class
+com\syntax\TestCases\LoginHRMS.class
